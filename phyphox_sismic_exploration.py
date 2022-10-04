@@ -152,7 +152,9 @@ def main():
                 
             
             def add_filter(path, system, sensibility, phone):
-
+                
+                if output_name_entry.get() == "":
+                    messagebox.showerror('Error', 'Crea el archvivo de salida primero')
                 accxiOS, accxAndroid = 'X (m/s^2)', 'Acceleration x (m/s^2)'
                 accyiOS, accyAndroid = 'Y (m/s^2)', 'Acceleration y (m/s^2)'
                 accziOS, acczAndroid = 'Z (m/s^2)', 'Acceleration z (m/s^2)'
