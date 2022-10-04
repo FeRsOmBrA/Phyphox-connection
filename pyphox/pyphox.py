@@ -128,18 +128,14 @@ class Pyphox:
             r = requests.get(url, allow_redirects=True)
             open(f'{path}/{name}.xls', 'wb').write(r.content)
             excel = client.DispatchEx("Excel.Application")
+            excel.DisplayAlerts = False
             # convertir el archivo a xlsx
-            for file  in os.listdir( path ):
-                filename, file_extension = os.path.splitext(file)
-                print(filename, file_extension)
-                wb = excel.Workbooks.Open(f'{path}/{file}')
-                output_path_bad = f'{path}/{filename}.xlsx'
-                output_path = output_path_bad.replace('/', '\\' )
-                wb.SaveAs(output_path, FileFormat = 51)
-                wb.Close()
-                if file_extension == '.xls':
-                    os.remove(f'{path}/{file}')
-                    
+            wb = excel.Workbooks.Open(f'{path}/{name}.xls')
+            output_path_bad = f'{path}/{name}.xlsx'
+            output_path = output_path_bad.replace('/', '\\' )
+            wb.SaveAs(output_path, FileFormat=51)
+            wb.Close()
+            os.remove(f'{path}/{name}.xls')
             excel.Quit()
             self.name = name
         else:

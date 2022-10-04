@@ -193,6 +193,24 @@ def main():
                                  main_ws['E' + str(max_row + phone)] =  df_acc[accyAndroid].iloc[i]
                                  main_ws['F' + str(max_row + phone)] =  df_acc[acczAndroid].iloc[i]
 
+                            meta_data = load_workbook(path)
+                            meta_data_time = meta_data['Metadata Time']
+                            server_ip = os.path.basename(path)
+                            #slice the extension
+                            server_ip = server_ip[:-5]
+                            main_ws[ 'A' + str(max_row + phone)] = server_ip
+                            main_ws['B' + str(max_row + phone)] = system
+                            meta_data_start_date ='G' + str(max_row + phone)
+                            meta_data_start_time ='H' + str(max_row + phone)
+                            meta_data_stop_date ='I' + str(max_row + phone)
+                            meta_data_stop_time ='J' + str(max_row + phone)
+                            impact_time = 'C' + str(max_row + phone) 
+                            real_impact_time ='K' + str(max_row + phone)
+                            main_ws[meta_data_start_date ] = meta_data_time['D2'].value
+                            main_ws[meta_data_start_time ] =  F'=VALUE(MID({meta_data_start_date},18,6))'
+                            main_ws[meta_data_stop_date] = meta_data_time['D3'].value
+                            main_ws[meta_data_stop_time ] =  F'=VALUE(MID({meta_data_stop_date},18,6))'
+                            main_ws[real_impact_time] =  f'={impact_time}+ {meta_data_start_time}' 
                     print('done for android')
             
                     
@@ -398,7 +416,7 @@ def main():
                 filters_select_path8.grid(row=7, column=2, padx= 10, pady = '10')
                 filters_select_path9 = tk.Button(filters_frame, text='Seleccionar archivo', command=select_path9)
                 filters_select_path9.grid(row=8, column=2, padx= 10, pady = '10')
-                filters_select_path10 = tk.Button(filters_frame, text='Seleccionar archivo', command=select_path9)
+                filters_select_path10 = tk.Button(filters_frame, text='Seleccionar archivo', command=select_path10)
                 filters_select_path10.grid(row=9, column=2, padx= 10, pady = '10')
                 filters_select_path1.config(font=('Cascadia Code', 9),fg = 'white', bg = 'black')
                 filters_select_path2.config(font=('Cascadia Code', 9),fg = 'white', bg = 'black')
