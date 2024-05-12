@@ -44,7 +44,7 @@ I also created a friendly Desktop App for use this library, you can do the follo
 
 After cloning the repository, simply run this:
 
-````bash
+```bash
 python phyphox_connection.py
 ```
 
