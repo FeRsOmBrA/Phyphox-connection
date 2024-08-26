@@ -33,15 +33,16 @@ After cloning the repository, simply run this:
 python phyphox_connection.py
 ```
 
-
-## Contributing
-
-Contributions are welcome! For major changes, please open an issue first to discuss what you would like to change. Please ensure to update tests as appropriate.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](notion://www.notion.so/LICENSE) file for details.
-
-## Contact
-
-For any queries, you can reach out to [GitHub Profile](https://github.com/FeRsOmBrA) [LinkedIn Profile](https://www.linkedin.com/in/ferney-castano/).
+<hr>  
+By:
+<div align="center">
+    <img src="https://i.ibb.co/DVCbGKp/1694197931620-e-1700697600-v-beta-t-V9i-TOhf-Pk-Vf-Bh4-QQxt-QPBVvs-Uyi-c-Emms-Qlh9d-C8p-UA.jpg" alt="hero" style="width: 200px; height: auto; border-radius: 50%;">
+    <h3>Andres Castaño</h3>
+    <p>Data Scientist | Geological Engineer</p>
+    <a href="https://github.com/FeRsOmBrA" target="_blank">
+        <img alt="GitHub" src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github" />
+    </a>
+    <a href="https://www.linkedin.com/in/ferney-castano/" target="_blank">
+        <img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin" />
+    </a>
+</div>
