@@ -112,5 +112,3 @@ def wave_arrival_time():
     main_wb.save(output_path)
     os.startfile(output_path)
 
-create_excel('fer')
-add_filter( path= 'C:/Users/PERSONAL/Desktop/Phyphox/172.20.10.1.xlsx' , system= 'iOS' , sensibility= 0.5, phone= 1)
