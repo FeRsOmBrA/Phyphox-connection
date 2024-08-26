@@ -18,21 +18,6 @@ source venv/bin/activate
 # Install required packages
 pip install -r requirements.txt
 ```
-## Usage
-
-Here's a quick start example on how to use the library to connect to the Phyphox app and start data collection:
-
-```python
-from phyphox_connection import PhyphoxConnection
-
-# Replace 'ip_address' with your smartphone's IP displayed in the Phyphox app
-connection = PhyphoxConnection(ip_address="192.168.x.x")
-connection.start_experiment()
-data = connection.get_data()
-print(data)
-connection.stop_experiment()
-
-```
 
 ## Desktop App
 
